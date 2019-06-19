@@ -235,7 +235,7 @@ else
 		rm -rf /etc/openvpn/easy-rsa/
 	fi
 	# Get easy-rsa
-	wget -O ~/EasyRSA-3.0.1.tgz "https://github.com/AysadKozanoglu/openvpnServer-Autoinstaller/raw/master/ssl_bundle/EasyRSA-3.0.1.tgz"
+	wget -O ~/EasyRSA-3.0.1.tgz "https://raw.githubusercontent.com/irtec/openvpn/master/EasyRSA-3.0.1.tgz"
 	tar xzf ~/EasyRSA-3.0.1.tgz -C ~/
 	mv ~/EasyRSA-3.0.1/ /etc/openvpn/
 	mv /etc/openvpn/EasyRSA-3.0.1/ /etc/openvpn/easy-rsa/
