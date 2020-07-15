@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Secure OpenVPN server installer for Debian, Ubuntu, CentOS, Amazon Linux 2, Fedora and Arch Linux
-# https://github.com/angristan/openvpn-install
+# https://raw.githubusercontent.com/irtec/openvpn/master/install.sh
 
 function isRoot() {
 	if [ "$EUID" -ne 0 ]; then
@@ -210,7 +210,7 @@ access-control: fd42:42:42:42::/112 allow' >>/etc/unbound/openvpn.conf
 
 function installQuestions() {
 	echo "Welcome to the OpenVPN installer!"
-	echo "The git repository is available at: https://github.com/angristan/openvpn-install"
+	echo "The git repository is available at: https://raw.githubusercontent.com/irtec/openvpn/master/install.sh"
 	echo ""
 
 	echo "I need to ask you a few questions before starting the setup."
@@ -373,7 +373,7 @@ function installQuestions() {
 	echo "Do you want to customize encryption settings?"
 	echo "Unless you know what you're doing, you should stick with the default parameters provided by the script."
 	echo "Note that whatever you choose, all the choices presented in the script are safe. (Unlike OpenVPN's defaults)"
-	echo "See https://github.com/angristan/openvpn-install#security-and-encryption to learn more."
+	echo "See https://raw.githubusercontent.com/irtec/openvpn/master/install.sh#security-and-encryption to learn more."
 	echo ""
 	until [[ $CUSTOMIZE_ENC =~ (y|n) ]]; do
 		read -rp "Customize encryption settings? [y/n]: " -e -i n CUSTOMIZE_ENC
@@ -1288,7 +1288,7 @@ function removeOpenVPN() {
 
 function manageMenu() {
 	echo "Welcome to OpenVPN-install!"
-	echo "The git repository is available at: https://github.com/angristan/openvpn-install"
+	echo "The git repository is available at: https://raw.githubusercontent.com/irtec/openvpn/master/install.sh"
 	echo ""
 	echo "It looks like OpenVPN is already installed."
 	echo ""
